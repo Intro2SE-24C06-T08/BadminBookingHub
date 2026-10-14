@@ -10,9 +10,9 @@
     "src/backend"
   ],
   "scripts": {
-    "dev": "concurrently -n api,web -c blue,green \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
-    "build": "npm run build --workspace backend && npm run build --workspace frontend",
-    "start": "npm run start --workspace backend"
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --workspace @badmin-booking-hub/backend\" \"npm run dev --workspace @badmin-booking-hub/frontend\"",
+    "build": "npm run build --workspace @badmin-booking-hub/backend && npm run build --workspace @badmin-booking-hub/frontend",
+    "start": "npm run start --workspace @badmin-booking-hub/backend"
   },
   "devDependencies": {
     "concurrently": "^9.2.1"

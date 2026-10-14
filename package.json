@@ -1,0 +1,20 @@
+{
+  "name": "badmin-booking-hub",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "workspaces": [
+    "src/frontend",
+    "src/backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace backend && npm run build --workspace frontend",
+    "start": "npm run start --workspace backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
